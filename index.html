@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cyber Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600&family=Exo:ital,wght@1,600&display=swap" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div id="container">
+        <!--    Start Section     -->
+        <div id="start">Enter The Matrix</div>
+       
+        <!--    Guide Section    -->
+        <div id="guide">
+            <h2>Salut à toi jeune geek</h2>
+            <div><img class="morpheus" src="images\morpheus.jpg" alt=""></div>
+            <h4>C'est maintenant l'heure pour toi de faire un choix.</h4>
+            
+            <h4>Choisi la pillule bleue, l'histoire s'arrête la, tu te réveilles dans ton lit et tu crois se que tu veux.</h4>
+            <br>
+            <h4>Choisi la pillule rouge, tu restes au Pays des Merveilles et on descend avec le lapin blanc au fond du terrier.</h4>
+            <br>
+            <h4>Fais le bon choix ton avenir en dépend.</h4>
+            <div id="button">
+                <button id="exit">Pillule Bleue</button>
+                <button id="continue">Pillule Rouge</button>
+            </div>
+        </div>
+
+        <!--    Quiz Section    -->
+        <div id="quiz">
+            <div id="quiz_header">
+                <h5>Cyber Quiz</h5>
+                <div id="timer">
+                    <h6>Temps</h6>
+                    <h6 id="time">00</h6>
+                </div>
+            </div>
+
+            <!--     Quiz Questions  -->
+
+            <div id="question">
+                <h2 id="questionNo"></h2>
+                <h2 id="questionText"></h2>
+            </div>
+
+            <!--       Quiz Choix   -->
+
+            <div id="optionList">
+                <h4 class="choice_que" id="option1"></h4>
+                <h4 class="choice_que" id="option2"></h4>
+                <h4 class="choice_que" id="option3"></h4>
+                <h4 class="choice_que" id="option4"></h4>
+            </div>
+
+            <!--  Reponse Section-->
+
+            <div id="answersSection">
+                <h3 id="total_correct">3 Of 10 Questions</h3>
+                <h3 id="next_question">Next</h3>
+            </div>
+        </div>
+        <!--   Resultat Section  -->
+        <div id="result">
+            <i class="fas fa-trophy"></i>
+            <div><img class="neo" src="images\neo.jpg" alt=""></div>
+            <h6>Bravo tu es l'élu de l'AFPA</h6>    
+            <h6 id="points">You Got 4 Out Of 10</h6>
+            <button id="quit">Quitter</button>
+            <button id="startAgain">Retourner dans la matrice</button>
+        </div>
+    </div>
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

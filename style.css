@@ -1,0 +1,348 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Exo', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: #ffffff;
+    background-image: url(images/matrix-code.jpg);
+    background-size: cover;
+    overflow: hidden;
+
+}
+
+#container {
+    height: auto;
+    width: auto;
+}
+
+/*Start Section*/
+#start {
+    height: 70px;
+    width: 300px;
+    text-align: center;
+    padding: 20px 0;
+    background: #22ff09;
+    color: #000;
+    font-size: 23px;
+    border-radius: 30px 10px;
+    border: 1px solid #b0c4d8;
+    cursor: pointer;
+    /* position: absolute;
+    top: calc(50vh - 70px);
+    left: calc(58vw - 300px); */
+    z-index: 999;
+    /* display: none; */
+}
+
+#start:hover {
+    background: #272424;
+    color: #e7f1fa;
+}
+
+
+
+/*guide Section*/
+#guide,
+#quiz {
+    height: auto;
+    width: 600px;
+    padding: 20px;
+    background: #51ff00;
+    border-radius: 30px 10px;
+    border: 2px solid #000000;
+    display: none;
+
+
+}
+
+.morpheus {
+    height: 150px;
+    width: 155px;
+    margin: auto;
+}
+
+#guide h2 {
+    font-size: 40px;
+    color: #000000;
+    text-align: center;
+}
+
+#guide h4 {
+    height: 43px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+#guide #button {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#guide #button button {
+    height: 50px;
+    width: 120px;
+    margin: 10px 25px;
+    border: none;
+    outline: none;
+    color: #e7f1fa;
+    background: #ff5235;
+    border: 1px solid #000000;
+    border-radius: 20px 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#guide #button #exit {
+    background: #000dc9;
+}
+
+#guide #button #exit:hover {
+    background: rgb(40, 126, 255);
+}
+
+#guide #button button:last-child {
+    margin: 10px 0;
+}
+
+#guide #button button:hover {
+    background: #ffa3a3;
+}
+
+#quiz {
+    /*    display: block;*/
+    height: 480px;
+    position: relative;
+  top: 50%;
+}
+
+#quiz #quiz_header {
+    height: 60px;
+    width: 100%;
+    background: #fafafc;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 30px 0;
+
+}
+
+#quiz #quiz_header h5 {
+    font-size: 28px;
+    margin: 0 20px;
+    color: #000000;
+}
+
+#quiz #quiz_header #timer {
+    height: 50px;
+    width: 200px;
+    background: #000000;
+    color: #e7f1fa;
+    border: 1px solid #b0c4d8;
+    font-size: 18px;
+    border-radius: 20px 5px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 10px;
+}
+
+#quiz #quiz_header #timer h6 {
+    font-size: 18px;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    margin: 0 10px;
+}
+
+#quiz #quiz_header #timer #time {
+    height: 44px;
+    width: 50px;
+    background: #fff;
+    color: #000000;
+    border: 1px solid #b0c4d8;
+    border-radius: 15px 7px;
+    margin: 2px 0 0 27px;
+}
+
+/*Quiz Questions*/
+#quiz #question {
+    position: absolute;
+    top: 90px;
+    display: flex;
+    flex-direction: row;
+}
+
+#quiz #question h2 {
+    font-size: 15px;
+}
+
+#quiz #question h2:first-child {
+    margin: 0 10px 0 5px;
+}
+
+/*Quiz Options*/
+#quiz #optionList {
+    height: 400px;
+    width: 100%;
+    position: absolute;
+    top: 160px;
+}
+
+#quiz #optionList h4 {
+    height: 50px;
+    width: 535px;
+    background: #0a160f;
+    line-height: 50px;
+    margin: 5px 0;
+    border-radius: 7px;
+    padding: 0 20px;
+    font-size: 12px;
+    color: #fff;
+    overflow: hidden;
+    border: 1px solid #b0c4d8;
+    cursor: pointer;
+}
+
+#quiz #optionList h4:hover {
+    background: #009c1a;
+}
+
+#quiz #optionList .active {
+    background: #01d441;
+}
+
+#quiz #optionList .disabled {
+    pointer-events: none;
+}
+
+/*Reponse Section*/
+
+#quiz #answersSection {
+    height: 60px;
+    width: 100%;
+    background: #fafafc;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 30px 0px;
+}
+
+#quiz #answersSection h3 {
+    margin: 0px 30px;
+    display: none;
+}
+
+#quiz #answersSection h3:last-child {
+    height: 40px;
+    width: 100px;
+    display: grid;
+    place-items: center;
+    background: #488f1f;
+    position: absolute;
+    right: 0;
+    color: #fff;
+    border: 1px solid #b0c4d8;
+    font-size: 18px;
+    border-radius: 20px 5px;
+    cursor: pointer;
+    margin: 0 20px;
+}
+
+#quiz #answersSection h3:hover {
+    background: #78ff2a;
+}
+
+#quiz #answersSection h3:first-child:hover {
+    background: none;
+}
+
+/*Resultat Section*/
+#container #result {
+    height: 500px;
+    width: 450px;
+    padding: 20px;
+    background: #e7f1fa;
+    border-radius: 30px 10px;
+    border: 1px solid #b0c4d8;
+    overflow: hidden;
+    position: relative;
+    /* top: calc(80vh - 500px);
+    left: calc(60vw - 450px); */
+    z-index: 990;
+    display: none;
+}
+
+#container #result i {
+    font-size: 180px;
+    color: #7fff35;
+    position: absolute;
+    top: 30px;
+    left: 120px;
+
+}
+
+#container #result h6 {
+    height: 40px;
+    width: 87%;
+    font-size: 25px;
+    position: absolute;
+    text-align: center;
+    top: 235px;
+}
+
+#container #result #points {
+    font-size: 30px;
+    top: 275px;
+
+}
+
+#container #result button {
+    height: 60px;
+    width: 260px;
+    border: none;
+    outline: none;
+    background: #8dff30;
+    color: #000000;
+    position: absolute;
+    left: 105px;
+    top: 335px;
+    border: 1px solid #b0c4d8;
+    border-radius: 20px 5px;
+    font-size: 18px;
+    cursor: pointer;
+
+}
+
+#container #result button:last-child {
+    top: 405px;
+}
+
+#container #result button:hover {
+    background: #319b1b;
+}
+
+.neo {
+    height: 210px;
+    width: 205px;
+    margin-left: 22%;
+    z-index: 992;
+    position: absolute;
+
+
+}
